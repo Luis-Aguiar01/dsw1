@@ -18,8 +18,8 @@
 				<td>Name:</td>
 				<td>Phone:</td>
 				<td>E-mail:</td>
-				<td>Actions:</td>
-				<td>Actions:</td>
+				<td>Update:</td>
+				<td>Delete:</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -28,8 +28,8 @@
 					<td><%= contact.getName() %></td>
 					<td><%= contact.getPhone() %></td>
 					<td><%= contact.getEmail() %></td>
-					<td><a href="delete-contact.jsp?id=<%= contact.getId() %>">Delete</a></td>
 					<td><a href="update-contact.jsp?id=<%= contact.getId() %>">Update</a></td>
+					<td><a href="delete-contact.jsp?id=<%= contact.getId() %>">Delete</a></td>
 				</tr>
 			<% } %>
 			
@@ -39,6 +39,5 @@
 	<a href="new-contact.jsp">
 		<button id="button">Add Contact</button>
 	</a>
-	
 </body>
 </html>

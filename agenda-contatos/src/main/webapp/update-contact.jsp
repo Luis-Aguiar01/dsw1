@@ -3,13 +3,12 @@
     
 <jsp:useBean id="contacts" class="br.edu.ifsp.dsw1.ContactsBean" scope="application"/>
 <jsp:useBean id="contact" class="br.edu.ifsp.dsw1.Contact" scope="request"/>
-<jsp:setProperty name="contact" property="id" param="id"/>
-<jsp:setProperty name="contact" property="name" param="name"/>
-<jsp:setProperty name="contact" property="phone" param="phone"/>
-<jsp:setProperty name="contact" property="email" param="email"/>
+<jsp:setProperty name="contact" property="*"/>
 
 <% 
 	Long id = contact.getId();
+	var findContact = contacts.findById(id);
+	
 	String name = contact.getName();
 	String phone = contact.getPhone();
 	String email = contact.getEmail();
@@ -18,9 +17,6 @@
 	if (name != null) {
 		
 		try {
-			
-			var findContact = contacts.findById(id);
-			
 			findContact.setEmail(email);
 			findContact.setName(name);
 			findContact.setPhone(phone);
@@ -44,13 +40,13 @@
 	<% if (!wasUpdated) { %>
 		<form action="update-contact.jsp?id=<%= id %>" method="POST">
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" required>
+			<input type="text" id="name" name="name" value="<%= findContact.getName() %>" required>
 			
 			<label for="phone">Phone:</label>
-			<input type="text" id="phone" name="phone" required>
+			<input type="text" id="phone" name="phone" value="<%= findContact.getPhone() %>" required>
 			
 			<label for="email">E-mail:</label>
-			<input type="email" id="email" name="email" required>
+			<input type="email" id="email" name="email" value="<%= findContact.getEmail() %>" required>
 			
 			<input type="submit" value="Submit" id="button">
 		</form>

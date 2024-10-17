@@ -4,25 +4,19 @@ table {
     border-collapse: collapse;
     width: 60%;
     margin: 20px auto;
+    background-color: #FEFEFA;
 }
 
 th, td {
-    border: 1px solid #333;
+    border: 2px solid #333;
     padding: 10px;
     text-align: center;
+    font-size: 17px;
 }
 
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
 
 tr:hover {
-    background-color: #ddd;
+    background-color: #F2F3F4;
 }
 
 form {
@@ -43,7 +37,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	background-color: #F0F8FF;
+	background-color: #FFFDD0;
 }
 
 form {
@@ -78,16 +72,18 @@ label {
 
 #button {
 	padding: 15px;
-	background-color: #003262;
-	color: #fff;
-	font-weight: bold;
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
+    background-color: #0077B6;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #button:hover {
-	background-color: #00396F
+	background-color: #005f87;
 }
 
 .message {
@@ -105,4 +101,10 @@ label {
 
 .back-button {
 	margin-top: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #0077B6;
+	cursor: pointer;
 }
