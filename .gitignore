@@ -1,0 +1,18 @@
+# Eclipse specific files
+.project
+.classpath
+.settings/
+
+# Ignore build files
+/build/
+/target/
+
+# Ignore Tomcat specific files
+.tomcat/
+.deploy/
+.temp/
+.logs/
+/Servers
+
+# Ignore workspace metadata (if you accidentally include the workspace)
+.metadata/
