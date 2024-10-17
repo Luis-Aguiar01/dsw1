@@ -12,8 +12,7 @@ public class Contact {
 	private String email;
 
 	public Contact() {
-		id = nextId;
-		nextId++;
+		id = nextId++;
 	}
 	
 	public Contact(Long id, String name, String phone, String email) {

@@ -20,32 +20,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<style>
-	* {
-		font-family: monospace;
-	}
-	
-	form {
-		display: flex;
-		flex-direction: column;
-		max-width: 50%;
-		margin: 0 auto;
-		border: 1px solid #000;
-		padding: 20px;
-	}
-	
-	label {
-		margin-top: 20px;
-	}
-	
-	input {
-		padding: 10px;
-	}
-	
-	#submit {
-		margin-top: 10px;
-	}
-</style>
+<link rel="stylesheet" type="text/css" href="style.css"/>
 <title>New Contact</title>
 </head>
 <body>
@@ -60,11 +35,14 @@
 			<label for="email">E-mail:</label>
 			<input type="email" id="email" name="email" required>
 			
-			<input type="submit" value="Submit" id="submit">
+			<input type="submit" value="Submit" id="button">
 		</form>
 	<% } else { %>
-		<h1>Contact insert successfully.</h1>
-		<a href="index.jsp">Back</a>
+		<h1 class="sucess">Contact insert successfully.</h1>
 	<% } %>
+	
+	<a href="index.jsp" class="back-button">
+		<button id="button">Back</button>
+	</a>
 </body>
 </html>

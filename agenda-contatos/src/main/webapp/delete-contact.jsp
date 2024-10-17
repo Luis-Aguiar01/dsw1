@@ -19,13 +19,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css"/>
 <title>Delete Contact</title>
 </head>
 <body>
 	<% if (exclude) {%>
-		<h1>Contact exclude successfully.</h1>
+		<h1 class="sucess">Contact exclude successfully.</h1>
 	<%} else {%>
-		<h1>Contato não excluído.</h1>
+		<h1 class="erro">Contact not deleted.</h1>
 	<%} %>
+	
+	<a href="index.jsp" class="back-button">
+		<button id="button">Back</button>
+	</a>
 </body>
 </html>
